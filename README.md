@@ -3,6 +3,8 @@ Plug your climate, ambient, accelerometer, camera and servo modules to your Tess
 
 Remotely control the camera to snap pictures.
 
+![](http://storage-public.realtime.co/screenshots/tessel-dashboard.png)
+
 ## Running the example
 To run this example in your Tessel use the following commands:
 
