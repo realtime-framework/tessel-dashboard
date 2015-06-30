@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tessel Dashboard</title>
+
+    <meta name="description" content="Source code generated using layoutit.com">
+    <meta name="author" content="LayoutIt!">
+
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap-theme.min.css">
+
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<link rel="stylesheet" href="css/mycss.css">
+	<script src="http://dfdbz2tdq3k01.cloudfront.net/js/2.1.0/ortc.js"></script>
+	<script src="js/myjs.js"></script>
+	<script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.2/raphael-min.js"></script>
+	<script type="text/javascript" src="js/kuma-gauge.jquery.js"></script>
+
+
+  </head>
+  <body>
+
+<div class="container-fluid">
+	<div class="row header">
+		<div class="col-md-4 col-sm-offset-2">
+			<a href="http://tessel.io">
+				<img id="tesselImage" src="data:image/png;base64,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"/>
+			</a>
+			</div>
+		<div class="col-md-2">
+			<a href="http://framework.realtime.co/messaging">
+				<img id="realtimeLogo" src="http://media.marketwire.com/attachments/201208/72059_RealtimeDropboxLogo.jpg"/>
+			</a>
+		</div>
+	</div>
+
+
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail col-centered">						
+						<div class="caption">
+							<h3>
+								Climate-module
+							</h3>
+
+							<h4 id="Temperature">Temperature ºC</h4>
+							<div class="js-gauge TemperatureLevel gauge" id="TemperatureLevel"></div>
+							
+							<h4 id="Humidity">Humidity %RH</h4>
+							<div class="js-gauge HumidityLevel gauge" id="HumidityLevel"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-4">
+					<div class="thumbnail col-centered">
+						<!--<img alt="Ambient-module" src="https://s3.amazonaws.com/technicalmachine-assets/product+pics/2014+05+15+production+modules/ambient.jpg" />-->
+						<div class="caption">
+							<h3>
+								Ambient-module
+							</h3>
+							<h4 id="Light">Light level</h4>
+							<div class="js-gauge LightLevel gauge" id="LightLevel"></div>
+
+							<h4 id="Sound">Sound level</h4>
+							<div class="js-gauge SoundLevel gauge" id="SoundLevel"></div>
+							
+						</div>
+					</div>
+				</div>
+
+
+				<div class="col-md-4">
+					<div class="thumbnail col-centered">
+						<div class="caption">
+							<h3>
+								Servo-module
+							</h3>
+							<div class="js-gauge ServoLevel gauge" id="servoLevel"></div>
+							<button class="btn btn-primary" onclick="servoLeft()">Move Left</button>
+							&nbsp;&nbsp;
+							<button class="btn btn-primary" onclick="servoRight()">Move Right</button>
+							<br/><br/>
+							<button class="btn btn-primary" onclick="servoCenter()">Move Center</button>
+							
+						</div>
+					</div>
+				</div>
+
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<div class="caption">
+							<h3>
+								Camera-module
+							</h3>
+							<button class="btn btn-primary" onclick="takePhoto()">Take photo</button>
+						</div>
+					</div>
+				</div>
+
+
+			</div>
+
+			<div class="row">
+				<div class="col-md-12 thumbnail col-centered">
+					<h3>
+						Accel-module
+					</h3>
+					<div class="col-md-4">
+						<h4 id="X">X</h4>
+						<div class="js-gauge XLevel gauge" id="XLevel"></div>
+					</div>
+
+					<div class="col-md-4">
+						<h4 id="Y">Y</h4>
+						<div class="js-gauge YLevel gauge" id="YLevel"></div>
+					</div>
+
+					<div class="col-md-4">
+						<h4 id="Z">Z</h4>
+						<div class="js-gauge ZLevel gauge" id="ZLevel"></div>
+					</div>
+				</div>
+			</div>
+
+			<div class="row" id="Photos">
+				
+			</div>
+			<script type="text/javascript">
+				drawPhotos();
+			</script>
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript">
+
+	$('#TemperatureLevel').kumaGauge({	  
+	  value : 0.0,
+	});
+
+	$('#HumidityLevel').kumaGauge({	  
+	   value : 0.0,
+	});
+
+	$('#LightLevel').kumaGauge({	  
+	   value : 0.0,
+	});
+
+	$('#SoundLevel').kumaGauge({	  
+	   value : 0.0,
+	});
+
+	$('#XLevel').kumaGauge({	  
+	   value : 0.0,
+	});
+
+	$('#YLevel').kumaGauge({	
+	   value : 0.0,
+	});
+
+	$('#ZLevel').kumaGauge({	  
+	   value : 0.0,
+	});
+
+	$('#servoLevel').kumaGauge({	  
+	   value : 50.0,
+	});
+	
+</script>
+
+  </body>
+</html>

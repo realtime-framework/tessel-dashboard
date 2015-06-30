@@ -1,0 +1,151 @@
+
+body{
+}
+
+#tesselImage{
+	width: 190px;
+  	margin-top: 33px;
+}
+
+.thumbnail img{
+	max-width: 500px;
+}
+
+.thumbnail{
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+}
+
+
+.header img{
+	max-height: 100px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+
+.frame{
+	border: 1px gray solid;
+	padding: 5px; 
+	max-width: 250px;
+	margin-top:30px;
+	margin-bottom:30px;
+
+
+	-webkit-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75); 
+}
+
+.col-centered{
+	text-align: center
+}
+
+
+.row{
+	margin-left: 5%;
+	margin-right: 5%;
+}
+
+
+// The radius of the arc
+radius : 80, 
+
+// The padding on the top and bottom of the gauge
+paddingX : 40, 
+
+// The padding on the left and right of the gauge
+paddingY : 40,  
+
+// The width of the gauge itseld
+gaugeWidth : 30, 
+
+// The fill of the gauge, this can be a solid color or a gradient
+fill : '0-#1cb42f:0-#fdbe37:50-#fa4133:100', 
+
+// The fill of the gauge background, this can be a solid color or a gradient
+gaugeBackground : '#f4f4f4', 
+
+// The fill of the canvas, this can be a solid color or a gradient
+background : '#fff', 
+
+// Show or hide the needle, 
+// if true the value label shows half of the range
+// if false the value label shows the value
+showNeedle : true, 
+
+// The speed of the animation in miliseconds
+animationSpeed : 500, 
+
+// The minimum value of the gauge
+min : 0,
+
+// The maximum value of the gauge
+max : 100, 
+
+// The actual value of the gauge
+value : 80, 
+
+// The label that indicates the value
+valueLabel : {
+
+  // show or hide this label
+  display : true, 
+
+  // The font family of this label
+  fontFamily : 'Arial', 
+
+  // The font color of this label
+  fontColor : '#000', 
+
+  // Integer of The font size of this label (without px)
+  fontSize : 20, 
+
+  // The font weight of this label
+  fontWeight : 'normal' 
+},
+
+title : {
+
+  // show or hide this label
+  display : true, 
+
+  // String the value of the title
+  value : '', 
+
+  // The font family of this label
+  fontFamily : 'Arial', 
+
+  // The font color of this label
+  fontColor : '#000', 
+
+  // Integer of The font size of this label (without px)
+  fontSize : 20, 
+
+   // The font weight of this label
+  fontWeight : 'normal'
+},
+label : {
+
+  // show or hide this label
+  display : true, 
+
+  // The value of the left (minimum) label
+  left : 'Low', 
+
+  // The value of the right (maximum) label
+  right : 'High',
+
+  // The font family of this label
+  fontFamily : 'Arial', 
+
+  // The font color of this label
+  fontColor : '#000', 
+
+  // Integer of The font size of this label (without px)
+  fontSize : 12, 
+
+  // The font weight of this label
+  fontWeight : 'normal' 
+}
